@@ -46,10 +46,25 @@ main {
   @include flex-display($align: start, $justify: start, $direction: column);
   position: relative;
   padding: 3rem;
-  width: 70rem;
-  height: 35rem;
+  width: 68rem;
+  height: auto;
   background-color: $background-color;
+  gap: 3rem;
   z-index: 5;
+
+  &-main,
+  header {
+    @include flex-display(
+      $align: start,
+      $justify: space-between,
+      $direction: row
+    );
+    width: 100%;
+  }
+
+  footer {
+    align-self: flex-end;
+  }
 }
 
 button {
@@ -60,6 +75,7 @@ button {
 .project-list-wrapper {
   @include flex-display($direction: column, $align: start);
   gap: 1rem;
+  padding: 0 3rem;
 
   .project-list {
     list-style: none;
@@ -71,6 +87,7 @@ button {
       background-color: transparent;
       text-decoration: underline;
       font-size: 1rem;
+      color: inherit;
     }
   }
 }

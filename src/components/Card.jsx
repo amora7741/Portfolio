@@ -7,15 +7,17 @@ const Card = ({ children }) => {
     <div className='card-wrapper'>
       <TopLeftBorder />
       <div className='card'>
-        <header></header>
+        <header>
+          <h1>Logo</h1>
+          <h2>Icons</h2>
+        </header>
         <div className='card-main'>
-          <div className='card-main-left'>
-            <h1>Hello</h1>
-          </div>
+          <div className='card-main-left'>{children}</div>
           <div className='card-main-right'>
             <ProjectList />
           </div>
         </div>
+        <footer>Footer</footer>
       </div>
       <BottomRightBorder />
     </div>
