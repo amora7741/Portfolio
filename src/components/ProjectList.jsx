@@ -1,4 +1,9 @@
+import { useContext } from 'react';
+import { CardContext } from '../context/CardContext';
+
 const ProjectList = () => {
+  const { setCard } = useContext(CardContext);
+
   return (
     <div className='project-list-wrapper'>
       <h2>Projects</h2>

@@ -1,11 +1,13 @@
 import './style.scss';
 import WelcomeCard from './components/WelcomeCard';
-import { useState } from 'react';
+import { useContext } from 'react';
+import { CardContext } from './context/CardContext';
+import ProjectCard from './components/ProjectCard';
 
 function App() {
-  const [card, setCard] = useState('home');
+  const { card } = useContext(CardContext);
 
-  return <main>{card === 'home' && <WelcomeCard />}</main>;
+  return <main>{card === 'home' ? <WelcomeCard /> : <ProjectCard />}</main>;
 }
 
 export default App;
