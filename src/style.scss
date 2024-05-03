@@ -1,5 +1,7 @@
-$background-color: #e2e8f0;
-$primary-color: #1e3a8a;
+$background-color: #26282b;
+$svg-color: #5f85db;
+$primary-text-color: rgb(207, 207, 207);
+$secondary-text-color: rgb(169, 169, 169);
 
 @mixin flex-display($justify: center, $align: center, $direction: row) {
   display: flex;
@@ -18,7 +20,7 @@ main {
   @include flex-display();
   min-height: 100vh;
   background-color: $background-color;
-  color: $primary-color;
+  color: $primary-text-color;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -28,7 +30,7 @@ main {
 
   svg {
     position: absolute;
-    fill: $primary-color;
+    fill: $svg-color;
   }
 
   .top-left {
@@ -80,14 +82,19 @@ button {
   .project-list {
     list-style: none;
     @include flex-display($direction: column, $align: start);
-    gap: 1rem;
 
     button {
       border: none;
       background-color: transparent;
+      color: $secondary-text-color;
+      padding: 10px 0;
       text-decoration: underline;
       font-size: 1rem;
-      color: inherit;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: $svg-color;
+      }
     }
   }
 }
