@@ -51,3 +51,26 @@ main {
   background-color: $background-color;
   z-index: 5;
 }
+
+button {
+  @include flex-display();
+  cursor: pointer;
+}
+
+.project-list-wrapper {
+  @include flex-display($direction: column, $align: start);
+  gap: 1rem;
+
+  .project-list {
+    list-style: none;
+    @include flex-display($direction: column, $align: start);
+    gap: 1rem;
+
+    button {
+      border: none;
+      background-color: transparent;
+      text-decoration: underline;
+      font-size: 1rem;
+    }
+  }
+}
