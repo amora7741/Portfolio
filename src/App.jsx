@@ -1,14 +1,11 @@
 import './style.scss';
-import Card from './components/Card';
+import WelcomeCard from './components/WelcomeCard';
+import { useState } from 'react';
 
 function App() {
-  return (
-    <main>
-      <Card>
-        <h1>Hello</h1>
-      </Card>
-    </main>
-  );
+  const [card, setCard] = useState('home');
+
+  return <main>{card === 'home' && <WelcomeCard />}</main>;
 }
 
 export default App;

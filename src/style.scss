@@ -67,6 +67,10 @@ main {
   footer {
     align-self: flex-end;
   }
+
+  .card-main-left {
+    flex: 1;
+  }
 }
 
 button {
@@ -95,6 +99,20 @@ button {
       &:hover {
         color: $svg-color;
       }
+    }
+  }
+}
+
+.card.home {
+  .card-main-left {
+    h1 {
+      font-size: 5rem;
+      font-weight: normal;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
     }
   }
 }

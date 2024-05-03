@@ -2,11 +2,11 @@ import TopLeftBorder from './TopLeftBorder';
 import BottomRightBorder from './BottomRightBorder';
 import ProjectList from './ProjectList';
 
-const Card = ({ children }) => {
+const Card = ({ children, cardClass = '' }) => {
   return (
     <div className='card-wrapper'>
       <TopLeftBorder />
-      <div className='card'>
+      <div className={`card ${cardClass}`}>
         <header>
           <h1>Logo</h1>
           <h2>Icons</h2>
