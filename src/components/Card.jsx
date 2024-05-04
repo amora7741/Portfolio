@@ -2,6 +2,7 @@ import TopLeftBorder from './TopLeftBorder';
 import BottomRightBorder from './BottomRightBorder';
 import ProjectList from './ProjectList';
 import { motion } from 'framer-motion';
+import SocialIcons from './SocialIcons';
 
 const Card = ({ children, cardClass = '' }) => {
   return (
@@ -10,7 +11,7 @@ const Card = ({ children, cardClass = '' }) => {
       <div className={`card ${cardClass}`}>
         <header>
           <h1>Logo</h1>
-          <h2>Icons</h2>
+          <SocialIcons />
         </header>
         <motion.div
           className='card-main'
@@ -23,7 +24,6 @@ const Card = ({ children, cardClass = '' }) => {
             <ProjectList />
           </div>
         </motion.div>
-        <footer>Footer</footer>
       </div>
       <BottomRightBorder />
     </div>
