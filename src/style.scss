@@ -1,7 +1,7 @@
 $background-color: #26282b;
 $svg-color: #5f85db;
 $primary-text-color: rgb(207, 207, 207);
-$secondary-text-color: rgb(169, 169, 169);
+$secondary-text-color: rgb(191, 191, 191);
 
 @mixin flex-display($justify: center, $align: center, $direction: row) {
   display: flex;
@@ -73,6 +73,13 @@ main {
 
   .card-main-left {
     flex: 1;
+    line-height: 1.5;
+    @include flex-display($align: start, $direction: column);
+    gap: 1rem;
+
+    p {
+      color: $secondary-text-color;
+    }
   }
 }
 
@@ -116,6 +123,21 @@ button {
 
     p {
       margin-bottom: 1rem;
+    }
+  }
+}
+
+.project-links {
+  @include flex-display($align: start, $direction: column);
+
+  a {
+    color: $secondary-text-color;
+    padding: 5px 10px;
+    margin-left: -10px;
+    font-size: 1.1rem;
+
+    &:visited {
+      color: $secondary-text-color;
     }
   }
 }
