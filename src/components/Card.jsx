@@ -40,7 +40,7 @@ const Card = ({ children, cardClass = '' }) => {
             <ProjectList />
           </div>
         </motion.div>
-        <footer>footer</footer>
+        <footer>© amora7741</footer>
       </div>
       <BottomRightBorder />
     </div>
