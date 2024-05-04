@@ -12,7 +12,9 @@ export const CardProvider = ({ children }) => {
   };
 
   return (
-    <CardContext.Provider value={{ card, projectDetails, selectProject }}>
+    <CardContext.Provider
+      value={{ card, projectDetails, selectProject, setCard }}
+    >
       {children}
     </CardContext.Provider>
   );

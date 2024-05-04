@@ -71,7 +71,7 @@ main {
   &-main,
   header {
     @include flex-display(
-      $align: start,
+      $align: center,
       $justify: space-between,
       $direction: row
     );
@@ -158,6 +158,22 @@ button {
   svg {
     width: 30px;
     fill: #777;
+
+    @include hoverColor();
+    transition: fill 0.2s ease-in-out;
+  }
+}
+
+.home-button {
+  border-radius: 9999px;
+  border: none;
+  margin-left: -20px;
+  background-color: transparent;
+  padding: 10px;
+  fill: #bbbbbb;
+
+  svg {
+    width: 50px;
 
     @include hoverColor();
     transition: fill 0.2s ease-in-out;
