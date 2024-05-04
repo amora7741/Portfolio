@@ -3,6 +3,7 @@ $svg-color: #5f85db;
 $primary-text-color: rgb(207, 207, 207);
 $secondary-text-color: rgb(191, 191, 191);
 $layout-breakpoint-small: 980px;
+$layout-breakpoint-mobile: 500px;
 
 @mixin flex-display($justify: center, $align: center, $direction: row) {
   display: flex;
@@ -166,6 +167,11 @@ button {
       font-size: 5rem;
       font-weight: normal;
       margin-bottom: 1rem;
+
+      @media (max-width: $layout-breakpoint-mobile) {
+        font-size: 2em;
+        font-weight: bold;
+      }
     }
 
     p {
