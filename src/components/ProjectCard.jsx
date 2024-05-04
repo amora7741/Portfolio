@@ -1,10 +1,6 @@
 import Card from './Card';
-import { useContext } from 'react';
-import { CardContext } from '../context/CardContext';
 
-const ProjectCard = () => {
-  const { projectDetails } = useContext(CardContext);
-
+const ProjectCard = ({ projectDetails }) => {
   return (
     <Card>
       <h1>{projectDetails.name}</h1>

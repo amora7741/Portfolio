@@ -16,7 +16,7 @@ const Card = ({ children, cardClass = '' }) => {
           className='card-main'
           initial={{ opacity: 0, scale: 1 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
         >
           <div className='card-main-left'>{children}</div>
           <div className='card-main-right'>

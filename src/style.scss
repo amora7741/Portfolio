@@ -10,6 +10,14 @@ $secondary-text-color: rgb(191, 191, 191);
   align-items: $align;
 }
 
+@mixin hoverColor($color: $svg-color) {
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: $color;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -72,7 +80,7 @@ main {
   }
 
   .card-main-left {
-    flex: 1;
+    max-width: 65%;
     line-height: 1.5;
     @include flex-display($align: start, $direction: column);
     gap: 1rem;
@@ -98,17 +106,13 @@ button {
     @include flex-display($direction: column, $align: start);
 
     button {
+      @include hoverColor();
       border: none;
       background-color: transparent;
       color: $secondary-text-color;
       padding: 10px 0;
       text-decoration: underline;
       font-size: 1rem;
-      transition: color 0.2s ease-in-out;
-
-      &:hover {
-        color: $svg-color;
-      }
     }
   }
 }
@@ -139,5 +143,7 @@ button {
     &:visited {
       color: $secondary-text-color;
     }
+
+    @include hoverColor();
   }
 }

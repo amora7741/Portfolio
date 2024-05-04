@@ -5,9 +5,20 @@ import { CardContext } from './context/CardContext';
 import ProjectCard from './components/ProjectCard';
 
 function App() {
-  const { card } = useContext(CardContext);
+  const { card, projectDetails } = useContext(CardContext);
 
-  return <main>{card === 'home' ? <WelcomeCard /> : <ProjectCard />}</main>;
+  return (
+    <main>
+      {card === 'home' ? (
+        <WelcomeCard />
+      ) : (
+        <ProjectCard
+          key={projectDetails.name}
+          projectDetails={projectDetails}
+        />
+      )}
+    </main>
+  );
 }
 
 export default App;
