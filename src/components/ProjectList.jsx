@@ -34,9 +34,11 @@ const ProjectList = () => {
       liveLink: 'https://memory-game-six-alpha.vercel.app/',
     },
     {
-      name: 'Coming Soon',
+      name: 'Weather App',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+        'This is a simple Weather App which uses WeatherAPI to fetch the location data which the user searches for. It displays the temperature, weather condition, and other useful information. Built with Next.js and Tailwind CSS.',
+      repoLink: 'https://github.com/amora7741/NextWeatherApp',
+      liveLink: 'https://next-weather-app-puce.vercel.app/',
     },
   ];
 
